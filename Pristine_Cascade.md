@@ -1,8 +1,8 @@
 # More Than A Hack 2027: Initial Challenge — Technical Report
-**Team Name:** MarquisVerino  
-**Author / Team Members:** Marquis Verino  
+**Team Name:** Pristine Cascade  
+**Team Members:** Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio  
 **Match Target:** FC Barcelona vs Athletic Club (LaLiga EA Sports 2024-25, Matchday 2)  
-**Deliverable Files:** `MarquisVerino.csv`, `MarquisVerino.pdf`, Public Code Repository  
+**Deliverable Files:** `Pristine Cascade.csv`, `Pristine Cascade.pdf`, Public Code Repository  
 
 ---
 
@@ -10,7 +10,7 @@
 
 Possession inference from raw computer-vision tracking is characterized by substantial sensor uncertainty: in the official Metrica ATD tracking dataset, the ball is missing in **41% of graded match frames**, tracking slots suffer frequent identity swaps, and player identities are anonymized across 46 track slots.
 
-Standard frame-level majority smoothing produces severe possession fragmentation, yielding hundreds of spurious possessions and low temporal alignment (**spellF1 = 0.2433** on the baseline floor). To solve this, we developed a four-stage, domain-grounded framework:
+Standard frame-level majority smoothing produces severe possession fragmentation, yielding hundreds of spurious possessions and low temporal alignment (**spellF1 = 0.2433** on the baseline floor). To solve this, team **Pristine Cascade** developed a four-stage, domain-grounded framework:
 1. **Multi-Scale Spatial-Temporal Consensus Fusion** combining $\pm 1.0\text{ s}$, $\pm 2.0\text{ s}$, and $\pm 5.0\text{ s}$ evidence;
 2. **Controlled Possession State Persistence** enforcing the association football principle that momentary deflections and duels do not constitute a turnover;
 3. **Occlusion Bridging** preventing artificial dead-ball splits during ball occlusion;
@@ -73,7 +73,7 @@ Scored using the official `evaluation/run_evaluation.py` harness against the pub
 
 | Rank | Model / Submission | macroF1 | spellF1 | Possessions | Mean Dur (s) | Trans F1@25 | Latency (frames) |
 | :---: | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| **1** | **MarquisVerino (Ours)** | **0.6274** | **0.4774** | **14** | **20.3 s** | **0.1143** | **+4.0** |
+| **1** | **Pristine Cascade (Ours)** | **0.6274** | **0.4774** | **14** | **20.3 s** | **0.1143** | **+4.0** |
 | 2 | `baseline_smooth125` | 0.5812 | 0.4242 | 16 | 18.5 s | 0.1667 | -7.7 |
 | 3 | `baseline_smooth50` | 0.6207 | 0.3256 | 26 | 10.8 s | 0.0816 | +4.0 |
 | 4 | `baseline_smooth25` | 0.6200 | 0.2868 | 36 | 7.6 s | 0.2034 | +8.2 |
@@ -96,17 +96,17 @@ Scored using the official `evaluation/run_evaluation.py` harness against the pub
 
 ## 7. Exact Reproduction Guide
 
-The submission file `MarquisVerino.csv` can be reproduced deterministically with the following commands:
+The submission file `Pristine Cascade.csv` can be reproduced deterministically with the following commands:
 
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
 
 # 2. Run the end-to-end generation script
-python generate_submission.py --output MarquisVerino.csv
+python generate_submission.py --output "Pristine Cascade.csv"
 
 # 3. Validate formatting against official checker
-python evaluation/validate_submission.py MarquisVerino.csv
+python evaluation/validate_submission.py "Pristine Cascade.csv"
 
 # 4. Score on official evaluation suite
 python evaluation/run_evaluation.py

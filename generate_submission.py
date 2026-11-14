@@ -1,5 +1,8 @@
 """Generate the final possession submission file for More Than A Hack 2027.
 
+Team Name: Pristine Cascade
+Team Members: Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio
+
 Architecture:
 1. Multi-scale spatial-temporal consensus fusion over raw tracking evidence (w25=2, w50=2, w125=1).
 2. Match schedule and stoppage anchoring (handling halftime, post-match, and the 2,934 graded
@@ -8,7 +11,7 @@ Architecture:
 4. Occlusion bridging (unifying live-play possessions separated by brief tracking dropouts < 50 frames).
 
 Usage:
-    python generate_submission.py --output MarquisVerino.csv
+    python generate_submission.py --output "Pristine Cascade.csv"
 """
 
 import argparse
@@ -126,15 +129,14 @@ def iterative_prune_and_bridge(codes, min_spell=75, min_dead_bridge=50, max_iter
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--output", default="MarquisVerino.csv",
-                        help="Output path for submission CSV (default: MarquisVerino.csv)")
+    parser.add_argument("--output", default="Pristine Cascade.csv",
+                        help="Output path for submission CSV (default: Pristine Cascade.csv)")
     parser.add_argument("--results-dir", default=None,
                         help="Directory containing baseline smoothed files")
     args = parser.parse_args()
 
     results_dir = args.results_dir
     if not results_dir:
-        # Search candidate locations
         candidates = [
             os.path.join(HERE, "Guide", "more-than-a-hack-2027-main", "evaluation", "results"),
             os.path.join(HERE, "evaluation", "results"),

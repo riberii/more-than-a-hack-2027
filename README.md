@@ -1,13 +1,13 @@
 # More Than A Hack 2027: Initial Challenge Submission
-**Team Name:** MarquisVerino  
-**Author / Team Members:** Marquis Verino  
+**Team Name:** Pristine Cascade  
+**Team Members:** Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio  
 **Official Challenge:** FC Barcelona vs Athletic Club — Automatic Possession Inference  
 
 ---
 
 ## Overview
 
-This repository contains the full source code, algorithmic pipeline, and reproduction instructions for team **MarquisVerino**'s submission to **More Than A Hack 2027 - Initial Challenge**.
+This repository contains the full source code, algorithmic pipeline, and reproduction instructions for team **Pristine Cascade**'s submission to **More Than A Hack 2027 - Initial Challenge**.
 
 Our method infers frame-by-frame match possession labels (`H` = Barcelona, `A` = Athletic Club, `D` = Dead Ball, `X` = Ungraded Abstention) for all 199,319 frames of the tactical video recording.
 
@@ -38,8 +38,8 @@ more-than-a-hack-2027-submission/
 ├── generate_submission.py       # Main deterministic submission generator
 ├── games.py                     # Official challenge constants and offset metadata
 ├── requirements.txt             # Pinned minimal dependencies
-├── MarquisVerino.pdf            # Short technical document (PDF submission)
-├── MarquisVerino.md             # Markdown version of technical document
+├── Pristine Cascade.pdf         # Short technical document (PDF submission)
+├── Pristine_Cascade.md          # Markdown version of technical document
 ├── evaluation/
 │   ├── gt/                      # Public 5-minute ground truth
 │   ├── results/                 # Official pre-computed baselines
@@ -64,18 +64,18 @@ pip install -r requirements.txt
 ### 2. Generate the Submission File
 Run the end-to-end generation script:
 ```bash
-python generate_submission.py --output MarquisVerino.csv
+python generate_submission.py --output "Pristine Cascade.csv"
 ```
-This produces `MarquisVerino.csv` with exactly 199,319 rows.
+This produces `Pristine Cascade.csv` with exactly 199,319 rows.
 
 ### 3. Validate Format
 Run the official competition validator:
 ```bash
-python evaluation/validate_submission.py MarquisVerino.csv
+python evaluation/validate_submission.py "Pristine Cascade.csv"
 ```
 Output:
 ```text
-OK    MarquisVerino.csv
+OK    Pristine Cascade.csv
       199319 rows, frame 0..199318
       label counts:
         H    59561   29.9%
@@ -89,11 +89,11 @@ Valid.
 ### 4. Evaluate Benchmark Score
 Copy the generated file to `evaluation/results/` and run the evaluation script:
 ```bash
-cp MarquisVerino.csv evaluation/results/
+cp "Pristine Cascade.csv" evaluation/results/Pristine_Cascade.csv
 python evaluation/run_evaluation.py
 ```
 Output:
 ```text
-rank  submission        macroF1  spellF1   poss     dur  transF1  lat_f
-   1  MarquisVerino      0.6274   0.4774     14    20.3   0.1143   +4.0
+rank  submission          macroF1  spellF1   poss     dur  transF1  lat_f
+   1  Pristine_Cascade     0.6274   0.4774     14    20.3   0.1143   +4.0
 ```
