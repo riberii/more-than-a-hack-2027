@@ -1,0 +1,22 @@
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Video and large match tracking assets (non-redistributable)
+*.mp4
+*.avi
+*broadcast*
+data/
+data/*
+
+# Output submissions
+*.csv
+!evaluation/gt/*.csv
+!evaluation/results/baseline_*.csv
