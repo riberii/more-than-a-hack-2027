@@ -1,0 +1,17 @@
+{
+  "total_graded": 158857,
+  "H_count": 51313,
+  "H_pct": 32.3,
+  "A_count": 34682,
+  "A_pct": 21.8,
+  "D_count": 72862,
+  "D_pct": 45.9,
+  "X_count": 0,
+  "H_share_alive": 0.597,
+  "n_possessions": 305,
+  "mean_poss_dur_s": 11.3,
+  "median_poss_dur_s": 7.4,
+  "n_dead": 139,
+  "mean_dead_dur_s": 21.0,
+  "median_dead_dur_s": 11.9
+}

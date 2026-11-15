@@ -9,14 +9,18 @@ venv/
 env/
 .venv/
 
-# Video and large match tracking assets (non-redistributable)
+# Large match tracking assets and videos (non-redistributable)
 *.mp4
 *.avi
 *broadcast*
 data/
 data/*
+Guides/
+Guides/*
 
-# Output submissions
-*.csv
+# Unignore submission files
+!Pristine Cascade.csv
+!Pristine_Cascade.csv
 !evaluation/gt/*.csv
 !evaluation/results/baseline_*.csv
+!evaluation/results/Pristine_Cascade.csv
