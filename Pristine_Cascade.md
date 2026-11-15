@@ -1,6 +1,6 @@
 # More Than A Hack 2027: Initial Challenge — Technical Report
 **Team Name:** Pristine Cascade  
-**Team Members:** Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio  
+**Team Members:** Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio, Henry Setiawan  
 **Match Target:** FC Barcelona vs Athletic Club (LaLiga EA Sports 2024-25, Matchday 2)  
 **Deliverable Files:** `Pristine Cascade.csv`, `Pristine Cascade.pdf`, Public Code Repository  
 

@@ -1,6 +1,6 @@
 # More Than A Hack 2027: Initial Challenge Submission
 **Team Name:** Pristine Cascade  
-**Team Members:** Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio  
+**Team Members:** Marquis Verino, Timothea Owen, Evan William Destiawan, Gregorius Raffaelino Diego Arsenio, Henry Setiawan  
 **Official Challenge:** FC Barcelona vs Athletic Club — Automatic Possession Inference  
 
 ---
@@ -34,7 +34,7 @@ Our method infers frame-by-frame match possession labels (`H` = Barcelona, `A` =
 ## Repository Structure
 
 ```text
-more-than-a-hack-2027-submission/
+more-than-a-hack-2027/
 ├── generate_submission.py       # Main deterministic submission generator
 ├── games.py                     # Official challenge constants and offset metadata
 ├── requirements.txt             # Pinned minimal dependencies
@@ -56,8 +56,8 @@ more-than-a-hack-2027-submission/
 ### 1. Installation
 Clone the repository and install dependencies in Python 3.8+ or Python 3.11+:
 ```bash
-git clone <YOUR_PUBLIC_REPOSITORY_URL>
-cd more-than-a-hack-2027-submission
+git clone https://github.com/riberii/more-than-a-hack-2027.git
+cd more-than-a-hack-2027
 pip install -r requirements.txt
 ```
 
